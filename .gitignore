@@ -1,0 +1,21 @@
+# ROS 2 Build Artifacts
+build/
+install/
+log/
+
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Colcon/Ament specific
+.step/
+colcon_test_results/
+
+# Editor specific
+.swp
+*.swp
+.idea/
+.vscode/
