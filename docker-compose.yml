@@ -1,0 +1,15 @@
+services:
+  ros2-dev:
+    image: osrf/ros:humble-desktop
+    container_name: ros2_learning
+    network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - .:/ros2_ws  # Simplified path
+    working_dir: /ros2_ws
+    stdin_open: true
+    tty: true
+    # This ensures the workspace is sourced every time you exec in
+    command: /bin/bash -c "source /opt/ros/humble/setup.bash && bash"
